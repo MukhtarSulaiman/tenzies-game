@@ -1,0 +1,92 @@
+/** @format */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+body, #root, .box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3rem;
+
+}
+
+#root {
+	width: 100%;
+	height: fit-content;
+     background: #0B2434;
+}
+
+main {
+	width: 80%;
+	height: auto;
+	padding: 40px;
+     background: #fff;
+	border-radius: 15px;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+}
+
+main p {
+	font-weight: lighter;
+	font-size: 1rem;
+}
+
+main .boxes-container {
+	width: 100%;
+	margin: 30px 0;
+	display: grid;
+	grid-template: auto auto auto / repeat(3, 1fr);
+	justify-content: center;
+	gap: 20px;
+}
+
+main .boxes-container .box {
+	width: 55px;
+	height: 55px;
+	font-weight: bold;
+	font-size: 2rem;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	/* background-color: #59E391; */
+}
+
+main button {
+	width: 100px;
+	height: 40px;
+	background-color: #5035FF;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+main button:active {
+	box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (min-width: 576px) {
+	main .boxes-container {
+		grid-template:  auto auto / repeat(5, 1fr);;
+	}
+}
+
+@media screen and (min-width: 1015px) {
+	#root {
+		width: 35%;
+		height: 65%;
+	}
+	main {
+		width: 85%;
+	}
+}
