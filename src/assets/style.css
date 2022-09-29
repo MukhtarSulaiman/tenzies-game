@@ -22,6 +22,7 @@ body, #root, .box {
 	width: 100%;
 	height: fit-content;
      background: #0B2434;
+	padding: 10Px 0;
 }
 
 main {
@@ -35,18 +36,24 @@ main {
 	text-align: center;
 }
 
+main h1 {
+	margin-block: .6rem;
+}
+
 main p {
+	margin: 0 auto;
 	font-weight: lighter;
-	font-size: 1rem;
+	font-size: 1.3rem;
+	margin-bottom: 1.5rem;
 }
 
 main .boxes-container {
-	width: 100%;
-	margin: 30px 0;
+	margin: 0 auto;
+	width: fit-content;
 	display: grid;
-	grid-template: auto auto auto / repeat(3, 1fr);
-	justify-content: center;
-	gap: 20px;
+	grid-template: auto / repeat(3, 1fr);
+	justify-items: center ;
+	gap: 30px;
 }
 
 main .boxes-container .box {
@@ -64,14 +71,16 @@ main .box.heled-box {
 }
 
 main button {
-	width: 100px;
+	width: 115px;
 	height: 40px;
 	background-color: #5035FF;
 	color: #fff;
+	font-size: 1.2rem;
 	font-weight: bold;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	margin-top: 1.5rem;
 }
 
 main button:active {
@@ -79,15 +88,26 @@ main button:active {
 }
 
 @media screen and (min-width: 576px) {
+	main {
+		height: 80%;
+	}
 	main .boxes-container {
-		grid-template:  auto auto / repeat(5, 1fr);;
+		grid-template:  auto auto / repeat(5, 1fr);
+		padding: 30px 0;
+	}
+	main .boxes-container .box {
+		width: 60px;
+		height: 60px;
+	}
+	main p {
+		width: 70%;
 	}
 }
 
 @media screen and (min-width: 1015px) {
 	#root {
-		width: 35%;
-		height: 65%;
+		width: 60%;
+		height: 70%;
 	}
 	main {
 		width: 85%;
