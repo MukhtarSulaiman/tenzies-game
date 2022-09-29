@@ -57,7 +57,10 @@ main .boxes-container .box {
 	border-radius: 5px;
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-	/* background-color: #59E391; */
+}
+
+main .box.heled-box {
+	background-color: #59E391;
 }
 
 main button {

@@ -1,7 +1,15 @@
 const Die = (props) => {
 
      const numbers = props.dice.map((die, index) => {
-          return <div className='box' >{die}</div>
+          return (
+               <div
+                    key={die.id}
+                    onClick={() => props.handleSelectedNumber(die.id)}
+                    className={die.isHeld ? 'box heled-box' : 'box'}
+               >
+				{die.value}
+			</div>
+		);
      })
 
      return (
