@@ -20,7 +20,7 @@ const Die = (props) => {
 				it at its current value between rolls.
 			</p>
 			<div className='boxes-container'>{numbers}</div>
-			<button onClick={props.handleClick}>Roll</button>
+			<button onClick={() => props.handleClick(props.isGameEnded)}> {props.isGameEnded ? 'New Game' : 'Roll'}</button>
 		</div>
 	);
 }
