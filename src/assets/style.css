@@ -22,7 +22,7 @@ body, #root, .box {
 	width: 100%;
 	height: fit-content;
      background: #0B2434;
-	padding: 10Px 0;
+	padding: 30Px 0;
 }
 
 main {
@@ -107,7 +107,6 @@ main button:active {
 @media screen and (min-width: 1015px) {
 	#root {
 		width: 60%;
-		height: 70%;
 	}
 	main {
 		width: 85%;
