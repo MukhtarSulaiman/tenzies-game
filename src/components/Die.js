@@ -18,6 +18,10 @@ const Die = (props) => {
 			<p>
 				{ props.isGameEnded ? 'You won the game! 🥳' : 'Roll until all dice are the same. Click each die to freeze it at its current value between rolls'}.
 			</p>
+			<div className="rolls-time-container">
+				<p>Rolls/{props.rollsNumber}</p>
+				<p>Time: </p>
+			</div>
 			<div className='boxes-container'>{numbers}</div>
 			<button onClick={() => props.handleClick(props.isGameEnded)}> {props.isGameEnded ? 'New Game' : 'Roll'}</button>
 		</div>

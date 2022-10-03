@@ -8,7 +8,8 @@ import Die from './components/Die';
 function App() {
 	const [dice, setDice] = React.useState(allNewDice());
 	const [tenzies, setTenzies] = React.useState(false);
-
+	const [rollsNumber, setRollsNumber] = React.useState(0);
+	
 	React.useEffect(() => {
 		const firstValue = dice[0].value;
 		const areAllHeld = dice.every((die) => die.isHeld);
@@ -39,14 +40,17 @@ function App() {
 	function handleClick(isGameEnded) {
 		if (isGameEnded) {
 			setDice(allNewDice());
-			setTenzies(false);
+			setTenzies(false)
+			setRollsNumber(0)
 		}
 		setDice((oldDice) =>
 			oldDice.map((die) => {
 				return die.isHeld ? die : generateNewDie();
 			})
 		);
-		console.log(isGameEnded);
+		setRollsNumber(prevRollsNumber => {
+			return prevRollsNumber = prevRollsNumber + 1
+		})
 	}
 
 	function handleSelectedNumber(id) {
@@ -67,6 +71,7 @@ function App() {
 				handleClick={handleClick}
 				handleSelectedNumber={handleSelectedNumber}
 				isGameEnded={tenzies}
+				rollsNumber={rollsNumber}
 			/>
 		</main>
 	);

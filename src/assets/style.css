@@ -47,6 +47,15 @@ main p {
 	margin-bottom: 1.5rem;
 }
 
+main .rolls-time-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+main .rolls-time-container p {
+	font-size: .9rem;
+}
+
 main .boxes-container {
 	margin: 0 auto;
 	width: fit-content;
@@ -101,6 +110,9 @@ main button:active {
 	}
 	main p {
 		width: 70%;
+	}
+	main .rolls-time-container p {
+		margin-bottom: 0;
 	}
 }
 
