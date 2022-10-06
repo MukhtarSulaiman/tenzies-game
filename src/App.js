@@ -9,6 +9,7 @@ function App() {
 	const [dice, setDice] = React.useState(allNewDice());
 	const [tenzies, setTenzies] = React.useState(false);
 	const [rollsNumber, setRollsNumber] = React.useState(0);
+	const [diceHaveNotSameValue, setDiceHaveNotSameValue] = React.useState(true);
 	const [time, setTime] = React.useState(0);
 	const [timerOn, setTimerOn] = React.useState(false);
 
@@ -19,7 +20,10 @@ function App() {
 		if (areAllHeld && areAllSameValue) {
 			setTenzies(true);
 			setTimerOn(false);
+			setDiceHaveNotSameValue(true);
 			console.log('You won the game 🥳');
+		} else if (areAllHeld && !areAllSameValue) {
+			setDiceHaveNotSameValue(false);
 		}
 	}, [dice]);
 
@@ -30,10 +34,7 @@ function App() {
 			interval = setInterval(() => {
 				setTime((prevTime) => prevTime + 10);
 			}, 10);
-		} else if (!timerOn) {
-			clearInterval(interval);
 		}
-
 		return () => clearInterval(interval);
 	}, [timerOn]);
 
@@ -91,6 +92,7 @@ function App() {
 				dice={dice}
 				handleClick={handleClick}
 				handleSelectedNumber={handleSelectedNumber}
+				diceHaveNotSameValue={diceHaveNotSameValue}
 				isGameEnded={tenzies}
 				rollsNumber={rollsNumber}
 				timer={time}

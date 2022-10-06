@@ -43,7 +43,7 @@ main h1 {
 main p {
 	margin: 0 auto;
 	font-weight: lighter;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	margin-bottom: 1.5rem;
 }
 
@@ -65,7 +65,7 @@ main .boxes-container {
 	gap: 30px;
 }
 
-main .boxes-container .box {
+main .boxes-container .img {
 	width: 55px;
 	height: 55px;
 	font-weight: bold;
@@ -75,8 +75,10 @@ main .boxes-container .box {
 	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
-main .box.heled-box {
-	background-color: #59E391;
+main .img.heled-img {
+	filter: brightness(0) saturate(100%) invert(74%) sepia(37%) saturate(5112%)
+    	hue-rotate(113deg) brightness(90%) contrast(91%);
+	/* background-color: #59E391; */
 }
 
 main button {
@@ -104,7 +106,7 @@ main button:active {
 		grid-template:  auto auto / repeat(5, 1fr);
 		padding: 30px 0;
 	}
-	main .boxes-container .box {
+	main .boxes-container .img {
 		width: 60px;
 		height: 60px;
 	}
