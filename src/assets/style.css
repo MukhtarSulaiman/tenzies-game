@@ -22,7 +22,7 @@ body, #root, .box {
 	width: 100%;
 	height: fit-content;
      background: #0B2434;
-	padding: 30Px 0;
+	padding: 60Px 0;
 }
 
 main {
@@ -86,7 +86,7 @@ main button {
 	height: 40px;
 	background-color: #5035FF;
 	color: #fff;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	font-weight: bold;
 	border: none;
 	border-radius: 5px;
