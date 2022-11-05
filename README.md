@@ -1,6 +1,6 @@
 # Tenzies Game
 
-It's a dice game that shows you 10 dice randomly with a value between 1 - 6 of course! Once you've selected the disered dice, you can display new ones by rolling the button. The game ends once you've selected the 10 dice that have the same value. It was fun building this mini-game using React 🤩
+It's a tenzis game that shows you 10 dice randomly with a value between 1 - 6 of course! Once you've selected the disered dice, you can display new ones by rolling the button. The game ends once you've selected the 10 dice that have the same value. It was fun building this mini-game using React 🤩
 
 ## Usage
 
